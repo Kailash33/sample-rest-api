@@ -37,8 +37,18 @@ const logInController = {
 
             const accessToken = JwtService.sign({ _id: user._id, role: user.role, status: user.status });
 
+            const response = {
+                _id: user._id,
+                name: user.name,
+                email: user.email,
+                role: user.role
+            }
+
+            console.log(response)
+
             res.json({
                 statusCode: 200,
+                data: response,
                 accessToken
             })
 

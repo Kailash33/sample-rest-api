@@ -1,5 +1,6 @@
 import express from "express";
-import { registerController, loginController } from "../controller";
+import { registerController, loginController, fetchUserController } from "../controller";
+import { authenticate } from "../middleware";
 
 const routes = express.Router();
 
@@ -7,6 +8,8 @@ const routes = express.Router();
 routes.post("/auth/register", registerController.register);
 
 routes.post("/auth/login", loginController.login);
+
+routes.get('/fetch', authenticate, fetchUserController.fetch)
 
 
 

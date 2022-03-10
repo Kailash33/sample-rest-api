@@ -17,6 +17,14 @@ class CustomErrorHandler extends Error {
     static accountSuspended(message = 'Your account is suspended! Please contact administrator.') {
         return new CustomErrorHandler(401, message);
     }
+
+    static unAuthorized(message = 'unAuthorized') {
+        return new CustomErrorHandler(401, message);
+    }
+
+    static notFound(message = 'User not found') {
+        return new CustomErrorHandler(404, message);
+    }
 }
 
 export default CustomErrorHandler;
