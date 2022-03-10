@@ -9,4 +9,5 @@ routes.post("/auth/register", registerController.register);
 routes.post("/auth/login", loginController.login);
 
 
+
 export default routes;

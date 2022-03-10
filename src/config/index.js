@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 
 dotenv.config({
-    path: "./environments/.env.development"
+    path: "./src/environments/.env.development"
 });
 
 export const {

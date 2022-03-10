@@ -1,10 +1,10 @@
 import express from "express";
 import logger from 'morgan';
 import cors from 'cors';
-import { ENVIRONMENT, PORT } from "./config";
-import errorHandler from "./middleware/errorHandler";
-import routes from "./routes";
-import DatabaseConnection from "./database";
+import { ENVIRONMENT, PORT } from "./src/config";
+import errorHandler from "./src/middleware/errorHandler";
+import routes from "./src/routes";
+import DatabaseConnection from "./src/database";
 
 const app = express();
 

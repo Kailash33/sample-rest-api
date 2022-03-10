@@ -5,6 +5,7 @@ class DatabaseConnection {
     constructor() { }
 
     connect() {
+        console.log(`mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_SERVER}/${DB_NAME}?retryWrites=true&w=majority`)
         return mongoose.connect(`mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_SERVER}/${DB_NAME}?retryWrites=true&w=majority`);
     }
 }
